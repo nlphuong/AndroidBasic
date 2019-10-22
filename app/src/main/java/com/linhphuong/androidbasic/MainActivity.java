@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import static java.lang.Math.sqrt;
+
 public class MainActivity extends AppCompatActivity {
     int chan, le, du;
     @Override
@@ -19,7 +21,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void inChinhPhuong() {
+        for(int i = 0; i<=100; i++){
+           int a = (int) sqrt(i);
+           if(a*a == i){
+               Log.d("DDD",i+" la so chinh phuong");
+           }else {
+               Log.d("EEE",i+" khong la so chinh phuong");
+           }
 
+        }
     }
 
     private void inSoChan(){
