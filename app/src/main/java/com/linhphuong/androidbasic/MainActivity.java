@@ -17,7 +17,21 @@ public class MainActivity extends AppCompatActivity {
         inSoLe();
         inSoChiaBaDuMot();
         inChinhPhuong();
-//        inNguyenTo();
+        inNguyenTo();
+    }
+
+    private void inNguyenTo() {
+            for(int i =2; i<= 100;i++){
+                int count = 0;
+                for(int j =2; j <=sqrt(i);j++){
+                    if(i%j == 0){
+                      count ++;
+                    }
+                }
+                if(count == 0){
+                    Log.d("FFF",i+" la so nguyen to");
+                }
+            }
     }
 
     private void inChinhPhuong() {
@@ -25,8 +39,6 @@ public class MainActivity extends AppCompatActivity {
            int a = (int) sqrt(i);
            if(a*a == i){
                Log.d("DDD",i+" la so chinh phuong");
-           }else {
-               Log.d("EEE",i+" khong la so chinh phuong");
            }
 
         }
