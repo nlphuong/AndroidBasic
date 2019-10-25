@@ -97,12 +97,28 @@ public class MainActivity extends AppCompatActivity {
 //            Log.d("BBB",newArray[i] + "");
 //        }
 //  BT1:  tinh tong cac gia trong mang
-        int[] number = {1,21,8,5,4,92,9,15,20,99};
-        int sum = 0;
-        for(int value : number){
-            sum += value;
+//        int[] number = {1,21,8,5,4,92,9,15,20,99};
+//        int sum = 0;
+//        for(int value : number){
+//            sum += value;
+//        }
+//        Log.d("BBB",sum+"");
+//        BT2 : tim kiem gia tri trong mang
+//                +Neu co tra ve vi tri
+//                +Neu khong co tra ve -1
+        //BT3 : tim kiem gia tri o vi tri dau tien
+//            {1,10,11,20,18,1,21,99};
+//            + Neu co in ra vi tri dau tien
+//            + Neu khong co in ra gia tri -1
+
+        int[] number = {1,21,4,8,5,4,92,9,15,20,99};
+        int k = 4;
+        int i =0;
+        while ((i< number.length) && (number[i]!=k)){
+            i++;
         }
-        Log.d("BBB",sum+"");
+        if(i> number.length-1)Log.d("BBB","-1");
+        else Log.d("BBB",i+"");
 
 
 
