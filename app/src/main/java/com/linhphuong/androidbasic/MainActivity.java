@@ -111,19 +111,33 @@ public class MainActivity extends AppCompatActivity {
 //            + Neu co in ra vi tri dau tien
 //            + Neu khong co in ra gia tri -1
 
-        int[] number = {1,21,4,8,5,4,92,9,15,20,99};
-        int k = 4;
-        int i =0;
-        while ((i< number.length) && (number[i]!=k)){
-            i++;
+//        int[] number = {1,21,4,8,5,4,92,9,15,20,99};
+//        int k = 4;
+//        int i =0;
+//        while ((i< number.length) && (number[i]!=k)){
+//            i++;
+//        }
+//        if(i> number.length-1)Log.d("BBB","-1");
+//        else Log.d("BBB",i+"");
+
+// BT4 : Xoa cac phan tu bi trung trong mang
+//            [1,2,3,3,3,4,5] => [1,2,3,4,5]
+        int[] number = {1,2,3,3,3,4,5};
+        int i;
+        int n = number.length;
+        for( i=0;i <n-1;i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (number[j] == number[i]) {
+                    for (int vitrixoa = j; vitrixoa < n; vitrixoa++)
+                        number[vitrixoa - 1] = number[vitrixoa];
+                    n--;
+                    j--;
+                }
+            }
         }
-        if(i> number.length-1)Log.d("BBB","-1");
-        else Log.d("BBB",i+"");
-
-
-
-
-
+            for (i = 0; i< n; i++){
+                Log.d("BBB", number[i]+"");
+            }
         }
 
 
