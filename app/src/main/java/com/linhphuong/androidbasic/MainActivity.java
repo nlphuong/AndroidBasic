@@ -96,6 +96,13 @@ public class MainActivity extends AppCompatActivity {
 //        for (int i = 0 ; i < newArray.length ; i++){
 //            Log.d("BBB",newArray[i] + "");
 //        }
+//  BT1:  tinh tong cac gia trong mang
+        int[] number = {1,21,8,5,4,92,9,15,20,99};
+        int sum = 0;
+        for(int value : number){
+            sum += value;
+        }
+        Log.d("BBB",sum+"");
 
 
 
